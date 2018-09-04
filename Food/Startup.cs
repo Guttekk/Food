@@ -28,7 +28,7 @@ namespace Food
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync(greeting.GreetingOfTheDay());
+                await context.Response.WriteAsync($"{greeting.GreetingOfTheDay()} : {env.EnvironmentName}");
             });
         }
     }
